@@ -7,7 +7,7 @@ export const navItems = [
     {
         title:"Lawyers",
         icon:"/assets/lawyer.png",
-        path:"/",
+        path:"/lawyer",
     },
     {
         title:"Total Users",

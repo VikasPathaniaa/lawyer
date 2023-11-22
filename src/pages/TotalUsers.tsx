@@ -83,10 +83,10 @@ const TotalUsers = () => {
       </div>
       {isLoading ? (
         <div className="flex justify-center items-center">
-          <PacmanLoader color="#36d7b7" />
+          <PacmanLoader color="#0F2C64" />
         </div>
       ) : (
-        <div className="mt-8 h-[50rem] overflow-y-auto">
+        <div className="mt-8 h-[45rem] overflow-y-auto">
           <table className="w-full">
             <ConfirmDialog handleDeleteConfirmation={handleDeleteConfirmation} confirmDelete={confirmDelete} />
             <thead>
