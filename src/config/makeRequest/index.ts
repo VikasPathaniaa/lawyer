@@ -1,6 +1,4 @@
-import axios from "axios";
-
-
+import axios from "axios"
 
 const axiosInstance = axios.create({
     baseURL: "https://shlok-mittal-lawyer-backend.vercel.app/api/v1",
