@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PacmanLoader } from "react-spinners";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { getUserList, removeUser } from "../config/allUser/allUsers";
+import { Link } from "react-router-dom";
 
 
 interface userInfo {
@@ -137,7 +138,7 @@ const TotalUsers = () => {
                         <td className="p-3  ">
                           <div className="flex flex-row items-center gap-4">
                             <span onClick={() => removeHandler(item._id)} className="cursor-pointer"> <img src="/assets/delete.png" alt="Image not found" /> </span>
-                            <span >  <img src="/assets/edit.png" alt="edit Image not found" className="cursor-pointer" /></span>
+                          <Link to="/edit-user">  <span >  <img src="/assets/edit.png" alt="edit Image not found" className="cursor-pointer" /></span> </Link>
                           </div>
                         </td>
                       </tr>
@@ -145,9 +146,7 @@ const TotalUsers = () => {
                   )
                 })
               }
-
-
-            </tbody>
+               </tbody>
           </table>
         </div>
       )}
