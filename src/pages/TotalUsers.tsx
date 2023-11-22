@@ -3,6 +3,7 @@ import { PacmanLoader } from "react-spinners";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { getUserList, removeUser } from "../config/allUser/allUsers";
 import { Link } from "react-router-dom";
+import ItemSearch from "../components/common/ItemSearch";
 
 
 interface userInfo {
@@ -70,16 +71,7 @@ const TotalUsers = () => {
     <>
       <div className="flex justify-between px-8 mt-11">
         <p className="font-medium text-4xl">All Users</p>
-        <div className="flex items-center bg-white border-gray-50 ">
-          <span className="bg-[#0F2C64] p-4 rounded-l-full">
-            <img src="/assets/search.png" />
-          </span>
-          <input
-            className="outline-none pl-3 border-gray-50"
-            type="text"
-            placeholder="Search in admin Panel"
-          />
-        </div>
+        <ItemSearch placeholder={"Search in admin Panel"}/>
       </div>
       {isLoading ? (
         <div className="flex justify-center items-center">

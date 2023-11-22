@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 import { getUserList, removeUser } from "../../config/allUser/allUsers";
 import ConfirmDialog from "../../components/ConfirmDialog";
 import Button from "../../components/common/Button";
+import { getLawyerList } from "../../config/lawyer";
+import ItemSearch from "../../components/common/ItemSearch";
 
 
 interface userInfo {
     _id: string;
     phone: string;
-    firstName: string;
+    fullName: string;
     email: string;
     consultancyCost: number;
-    image: string
+    barRegistrationImage: string
 
 }
 
@@ -29,7 +31,7 @@ const Lawyer = () => {
     const getData = async () => {
         try {
             setIsLoading(true)
-            const response = await getUserList()
+            const response = await getLawyerList()
             const finalResult = await response.data
             if (finalResult.status == 200) {
                 setData(finalResult?.data)
@@ -73,16 +75,7 @@ const Lawyer = () => {
             <div className="flex justify-between px-8 mt-11">
                 <p className="font-medium text-4xl">All Lawyers</p>
                 <div className="flex flex-row" >
-                <div className="flex items-center bg-white border-gray-50 ">
-                    <span className="bg-[#0F2C64] p-4 rounded-l-full">
-                        <img src="/assets/search.png" />
-                    </span>
-                    <input
-                        className="outline-none pl-3 border-gray-50"
-                        type="text"
-                        placeholder="Search in admin Panel"
-                    />
-                </div>
+                <ItemSearch placeholder="search Lawyer"/>
                 <div className="flex  items-center bg-white">
                     <Button style="bg-[#0F2C64] p-3 text-white rounded-2xl">  Add New Lawyer</Button>
 
@@ -128,12 +121,12 @@ const Lawyer = () => {
                                                     </span>
                                                 </td>
                                                 <td className=" p-3 flex flex-row items-center gap-4 capitalize">
-                                                    {item?.image ? (
-                                                        <img className="rounded-full  h-14 w-14" src={item?.image} alt="user" />
+                                                    {item?.barRegistrationImage ? (
+                                                        <img className="rounded-full  h-14 w-14" src={item?.barRegistrationImage} alt="user" />
                                                     ) : (
                                                         <img className="rounded-full  h-14 w-14" src="/assets/user.png" alt="user not found" />
                                                     )}
-                                                    <p className="text-[#101828] font-normal text-lg">{item?.firstName}</p>
+                                                    <p className="text-[#101828] font-normal text-lg">{item?.fullName}</p>
                                                 </td>
                                                 <td className="p-3 text-[#101828] font-normal text-base">
                                                     {" "}
