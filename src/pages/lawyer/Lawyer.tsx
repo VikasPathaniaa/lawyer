@@ -75,13 +75,13 @@ const Lawyer = () => {
             <div className="flex justify-between px-8 mt-11">
                 <p className="font-medium text-4xl">All Lawyers</p>
                 <div className="flex flex-row" >
-                <ItemSearch placeholder="search Lawyer"/>
-                <div className="flex  items-center bg-white">
-                    <Button style="bg-[#0F2C64] p-3 text-white rounded-2xl">  Add New Lawyer</Button>
+                    <ItemSearch placeholder="search Lawyer" />
+                    <div className="flex  items-center bg-white">
+                        <Button style="bg-[#0F2C64] p-3 text-white rounded-2xl">  Add New Lawyer</Button>
 
+                    </div>
                 </div>
-                </div>
-               
+
             </div>
             {isLoading ? (
                 <div className="flex justify-center items-center">

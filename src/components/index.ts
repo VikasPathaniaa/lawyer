@@ -17,7 +17,7 @@ export const navItems = [
     {
         title:"Cases",
         icon:"/assets/cases.png",
-        path:"/",
+        path:"/cases",
     },
     {
         title:"Notification",

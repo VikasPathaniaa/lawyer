@@ -81,7 +81,7 @@ const TotalUsers = () => {
         <div className="mt-8 h-[45rem] overflow-y-auto">
           <table className="w-full">
             <ConfirmDialog handleDeleteConfirmation={handleDeleteConfirmation} confirmDelete={confirmDelete} />
-            <thead>
+            <thead >
               <tr>
                 <th className="p-3 text-[#6D6D6D] font-normal text-xs text-start"></th>
                 <th className="p-3 text-[#6D6D6D] font-normal text-xs text-start"> User Name</th>

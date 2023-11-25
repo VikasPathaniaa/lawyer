@@ -22,7 +22,7 @@ const Header = () => {
           <p className='text-[#363740] font-light'>Loreum Ipsum</p>
         </div>
       </div>
-      <div className='flex gap-8 '>
+      <div className=' gap-8 hidden lg:flex '>
         <div className='flex items-center border-2 border-gray-50  bg-white'>
           <span className='bg-[#0F2C64] p-3 rounded'><img src="/assets/search.png" /></span>
           <input className='outline-none pl-3 ' type='text' placeholder='Search in admin Panel' />

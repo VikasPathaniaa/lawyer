@@ -7,6 +7,7 @@ import Message from './components/Message';
 import EditUser from './pages/user/EditUser';
 import Lawyer from './pages/lawyer/Lawyer';
 import Dashboard from './pages/dashboard/Dashboard';
+import Cases from './pages/cases/Cases';
 const App = () => {
   // const navigate = useNavigate()
   // useEffect(() => {
@@ -36,6 +37,10 @@ const App = () => {
       } />
       <Route path='/lawyer' element={<Layout>
         <Lawyer />
+      </Layout>
+      } />
+      <Route path='/cases' element={<Layout>
+        <Cases />
       </Layout>
       } />
 
